@@ -1,0 +1,14 @@
+\select@language {french}
+\contentsline {chapter}{\numberline {1}TD1 - Estimation du bruit}{2}
+\contentsline {section}{\numberline {1.1}G\IeC {\'e}n\IeC {\'e}ration du bruit et estimation du PSNR}{2}
+\contentsline {subsection}{\numberline {1.1.1}G\IeC {\'e}n\IeC {\'e}ration du bruit gaussien}{2}
+\contentsline {subsection}{\numberline {1.1.2}G\IeC {\'e}n\IeC {\'e}ration du bruit ricien}{3}
+\contentsline {section}{\numberline {1.2}Estimation du niveau de bruit dans le cas gaussien \IeC {\`a} l'aide de l'estimateur MAD}{4}
+\contentsline {subsection}{\numberline {1.2.1}La transfom\IeC {\'e}e en ondelette}{4}
+\contentsline {subsection}{\numberline {1.2.2}L'estimateur MAD}{4}
+\contentsline {section}{\numberline {1.3}Estimation \IeC {\`a} l'aide de la distribution des statistiques locales de l'image}{5}
+\contentsline {subsection}{\numberline {1.3.1}Les moyennes locales}{5}
+\contentsline {subsection}{\numberline {1.3.2}Les variances locales}{5}
+\contentsline {section}{\numberline {1.4}Comparaison}{6}
+\contentsline {subsection}{\numberline {1.4.1}Moyennes locales contre Variances locales}{6}
+\contentsline {chapter}{\numberline {2}TD2 - M\IeC {\'e}thode de d\IeC {\'e}bruitage}{7}

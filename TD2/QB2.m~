@@ -1,0 +1,8 @@
+[imgNoisyG, sigma] = AddGaussianNoise(MRIT1w, 7);
+imgDenoisedW = WaveletDenoising(imgNoisyG, sigma);
+[m,n,o] = size(MRIT1w);
+psnrW = ComputePSNR(MRIT1w,imgDenoisedW(1:));
+
+figure;
+imagesc(imgDenoisedW(:,:,90));
+colormap(gray);

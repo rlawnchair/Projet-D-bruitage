@@ -1,0 +1,28 @@
+function [ threshold ] = WaveletDenoising( inputImg , sigma)
+
+padMRIT1w = zeropad(inputImg);
+[af, sf] = farras;
+J = 1;
+dwtpadMRIT1w = dwt3D(padMRIT1w,J,af);
+std = median(abs(dwtpadMRIT1w{J}{7}(:)))/0.6745;
+threshold = std*sqrt(2*log(size(dwtpadMRIT1w{J}{7}(:))));
+
+imgnpad = imgn;
+imgnpad(256,256,256) = 0;
+
+
+[af, sf] = farras;
+J=1;
+dwtimgnpad = dwt3D(imgnpad, J, af);
+
+seuil = filterParam * sqrt(2*log(length(imgn(:))));
+
+for i=1:7
+    bool = abs(dwtimgnpad{1}{i}) > seuil;
+    dwtimgnpad{1}{i} = bool .* dwtimgnpad{1}{i};
+end
+
+MRI3DpadDenoised = idwt3D(dwtimgnpad, J, sf);
+
+imgf = MRI3DpadDenoised(1:size(imgn,1), 1:size(imgn,2), 1:size(imgn,3));
+end
